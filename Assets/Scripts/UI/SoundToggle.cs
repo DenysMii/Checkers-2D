@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class SoundToggle : MonoBehaviour
 {
-    [SerializeField] private AudioListener audioListener;
     [SerializeField] private Sprite notPressed;
     [SerializeField] private Sprite pressed;
 
@@ -17,7 +16,7 @@ public class SoundToggle : MonoBehaviour
     public void ToggleSound()
     {
         isSoundOn = !isSoundOn;
-        audioListener.enabled = isSoundOn;
+        AudioListener.volume = isSoundOn ? 1.0f : 0.0f;
         image.sprite = isSoundOn ? notPressed : pressed;
     }
 }
