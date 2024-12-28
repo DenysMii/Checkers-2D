@@ -8,7 +8,7 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private GameObject resultWindow;
 
     private const int piecesCounter = 24;
-    private int drawCounter = 10;
+    private int drawCounter = 40;
     private Cell[,] cellObjectsMatrix;
 
     public CellsPiecesGenerator cellsCheckersGenerator { get; private set; }
